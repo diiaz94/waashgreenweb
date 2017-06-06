@@ -1,0 +1,37 @@
+<!--<ion-view title="Home" hide-back-button=true>
+  <ion-nav-bar>
+    <ion-nav-buttons side="secondary">
+      <button class="button" ng-click="home.logout()">
+        Logout
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="padding">
+    <ion-item class="card">
+      <div class="item-text-wrap padding">
+        <h2>You Are Logged Into the Application:  {{currentUser | json}}</h2>
+        <p>
+          <pre style="font-size:smaller">  </pre> 
+        </p>
+      </div>
+      <form ng-submit="home.addTask(home.newTask)">
+      	<input type="text" name="text" ng-model="home.newTask.text" placeholder="Type to add new tasks" />
+      </form>
+    </ion-item>
+
+		<ion-list>
+			<ion-item ng-repeat="task in home.data"
+								type="item-text-wrap">
+		        <h2>{{ task.text }}</h2>
+		        <span class="last-message-timestamp">{{ task.createdAt | calendar }}</span>
+		        <i class="icon ion-chevron-right icon-accessory"></i>
+		        <ion-option-button class="button-assertive" ng-click="home.remove(task)">
+		          Remove
+		        </ion-option-button>
+		      </ion-item>
+		    </ion-list>
+		</ion-list>
+
+
+  </ion-content>
+</ion-view> -->
