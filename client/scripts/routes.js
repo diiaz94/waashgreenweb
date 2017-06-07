@@ -8,7 +8,6 @@ class RoutesConfig extends Config {
   
   constructor() {
     super(...arguments);
-
     this.isAuthorized = ['$auth', this.isAuthorized.bind(this)];
   }
 
@@ -28,7 +27,7 @@ class RoutesConfig extends Config {
         }
       });
 
-   // this.$urlRouterProvider.otherwise('/login');
+    this.$urlRouterProvider.otherwise('/login');
   }
   isAuthorized($auth) {
     return $auth.awaitUser();

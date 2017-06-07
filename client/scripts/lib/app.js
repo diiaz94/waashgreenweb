@@ -25,7 +25,8 @@ const App = 'WaashGreen';
 Angular.module(App, [
   'angular-meteor',
   'angular-meteor.auth',
-  'angularMoment'
+  'angularMoment',
+  'ui.router'
 ]);
 
 new Loader(App)
