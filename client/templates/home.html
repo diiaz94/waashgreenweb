@@ -1,37 +1,80 @@
-<!--<ion-view title="Home" hide-back-button=true>
-  <ion-nav-bar>
-    <ion-nav-buttons side="secondary">
-      <button class="button" ng-click="home.logout()">
-        Logout
-      </button>
-    </ion-nav-buttons>
-  </ion-nav-bar>
-  <ion-content class="padding">
-    <ion-item class="card">
-      <div class="item-text-wrap padding">
-        <h2>You Are Logged Into the Application:  {{currentUser | json}}</h2>
-        <p>
-          <pre style="font-size:smaller">  </pre> 
-        </p>
-      </div>
-      <form ng-submit="home.addTask(home.newTask)">
-      	<input type="text" name="text" ng-model="home.newTask.text" placeholder="Type to add new tasks" />
-      </form>
-    </ion-item>
+<div class="wrapper">
+  <div class="header">
 
-		<ion-list>
-			<ion-item ng-repeat="task in home.data"
-								type="item-text-wrap">
-		        <h2>{{ task.text }}</h2>
-		        <span class="last-message-timestamp">{{ task.createdAt | calendar }}</span>
-		        <i class="icon ion-chevron-right icon-accessory"></i>
-		        <ion-option-button class="button-assertive" ng-click="home.remove(task)">
-		          Remove
-		        </ion-option-button>
-		      </ion-item>
-		    </ion-list>
-		</ion-list>
+  </div>
+  <!-- you can use the class main-raised if you want the main area to be as a page with shadows -->
+  <div class="main main-raised">
+    <div class="container">
 
-
-  </ion-content>
-</ion-view> -->
+      <!-- here you can add your content -->
+      <table class="table">
+        <thead>
+            <tr>
+                <th class="text-center">#</th>
+                <th>Name</th>
+                <th>Job Position</th>
+                <th>Since</th>
+                <th class="text-right">Salary</th>
+                <th class="text-right">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">1</td>
+                <td>Andrew Mike</td>
+                <td>Develop</td>
+                <td>2013</td>
+                <td class="text-right">&euro; 99,225</td>
+                <td class="td-actions text-right">
+                    <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
+                        <i class="fa fa-user"></i>
+                    </button>
+                    <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
+                        <i class="fa fa-edit"></i>
+                    </button>
+                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center">2</td>
+                <td>John Doe</td>
+                <td>Design</td>
+                <td>2012</td>
+                <td class="text-right">&euro; 89,241</td>
+                <td class="td-actions text-right">
+                    <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
+                        <i class="fa fa-user"></i>
+                    </button>
+                    <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
+                        <i class="fa fa-edit"></i>
+                    </button>
+                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center">3</td>
+                <td>Alex Mike</td>
+                <td>Design</td>
+                <td>2010</td>
+                <td class="text-right">&euro; 92,144</td>
+                <td class="td-actions text-right">
+                    <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
+                        <i class="fa fa-user"></i>
+                    </button>
+                    <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
+                        <i class="fa fa-edit"></i>
+                    </button>
+                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
