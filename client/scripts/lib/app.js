@@ -14,10 +14,6 @@ import HomeCtrl from '../controllers/home.controller';
 import CalendarFilter from '../filters/calendar.filter';
 import RoutesConfig from '../routes';
 
-import './material.min.js';
-import './nouislider.min.js';
-import './material-kit.js';
-
  
 const App = 'WaashGreen';
  

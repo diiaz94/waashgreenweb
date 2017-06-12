@@ -16,7 +16,7 @@ export default class LoginCtrl extends Controller {
   }
 
   login (user) {
-
+    debugger;
   	if (_.isEmpty(user) || _.isEmpty(user.username) || _.isEmpty(user.password) ) return;
  		debugger;
  		Meteor.loginWithPassword(user.username, user.password, (err) => {
@@ -44,7 +44,12 @@ export default class LoginCtrl extends Controller {
         this.$state.go('home');
     });
   }
+
+
+
+
 }
  
 LoginCtrl.$name = 'LoginCtrl';
 LoginCtrl.$inject = ['$state'];
+
