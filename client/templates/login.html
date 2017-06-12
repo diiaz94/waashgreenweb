@@ -5,34 +5,39 @@
 				
 				<form class="form" ng-submit="logger.login(logger.user)" style="padding:3%;">
 
-					<div class="row header-btn">
-						<div class="col-xs-6 col-sm-6 col-md-6">
-							<button type="button" class="btn btn-green btn-xs btn-responsive" style="float : left;margin-left: 2%" ng-click="logger.signup()">Registrate<div class="ripple-container"></div></button>
-						</div>	
-						<div class="col-xs-6 col-sm-6 col-md-6">
-							<button class="btn btn-green btn-xs btn-responsive" style="float : right;margin-right: 2%">Conviertete en Washer<div class="ripple-container"></div></button>
-						</div>
-					</div>
 					<div class="content">
-
-						<div class="initial-logo">
-		          <img src="img/logo_waash_03.png" alt="Rounded Image" class="img-rounded">  
-		        </div>
+						<div class="row initial-logo">
+				          <img src="img/logo_waash_03.png" alt="Rounded Image" class="img-rounded">  
+				        </div>
+				        <div class="input-group input-full" style="text-align: center;">
+				        	<label> <img src="/img/facebook-login.png" 
+				        	style="width:20px;height: 20px">
+				        	Inicia sesión con Facebook</label>
+				        	<div style="height: 2px;background-color: #5b6f98;"></div>
+						</div>
 
 						<div class="input-group input-full">
 
 							<input ng-model="logger.user.username" type="email" class="form-control input-center" placeholder="Correo">
-						
 						</div>
 
 						<div class="input-group input-full">
 							<input ng-model="logger.user.password" type="password" class="form-control input-center" placeholder="Contraseña"/>
 						</div>
-
 					</div>
 					<div class="footer text-center footer-login">
-						<button type="submit" class="btn btn-primary" >INGRENSAR</button>
+
+						<button type="button" class="btn-login btn btn-primary" >INGRESAR</button>
+						<div class="row footer-btn">
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<button type="button" class="btn btn-green btn-xs btn-responsive" style="float : left;" ng-click="logger.signup()">Regístrate<div class="ripple-container"></div></button>
+							</div>	
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<button type="button" class="btn btn-green btn-xs btn-responsive" style="float : right;">Conviértete en Washer<div class="ripple-container"></div></button>
+							</div>
+						</div>
 					</div>
+					
 
 				</form>
 			</div>

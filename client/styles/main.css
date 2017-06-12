@@ -38,11 +38,13 @@
 
 .footer-login {
 	margin-top: 5%;
+	width: 70%;
+	margin: 0 auto;
 }
 
-.footer-login button {
-	width: 70%;
+.footer-login button.btn-login {
+	width: 100%;
 }
-.header-btn button {
+.footer-btn button {
 	padding : 5px !important;
 }

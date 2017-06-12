@@ -1,0 +1,16 @@
+@media (max-width:768px) {
+	.row{
+		margin:0;
+		padding:0;
+	}
+
+	.container{
+		padding: 0!important;
+	}
+	.footer-login {
+		width: 90%!important;
+	}
+	.footer-btn div{
+		padding: 0!important;
+	}
+}
