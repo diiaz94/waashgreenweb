@@ -1,7 +1,7 @@
 .btn-green {
 	background-color: #0E481E;
-    color: #FFFFFF;
-    box-shadow: 0px 5px 4px #B2B2B2;
+    color: #FFFFFF !important;
+    box-shadow: 0px 5px 4px #B2B2B2 !important;
 }
 
 .btn-green:hover {
@@ -46,4 +46,3 @@
 .header-btn button {
 	padding : 5px !important;
 }
-
