@@ -48,3 +48,12 @@
 .footer-btn button {
 	padding : 5px !important;
 }
+
+#logo{
+	max-width: 200px;
+}
+
+#content-login{
+	margin-top: 6%;
+	
+}
