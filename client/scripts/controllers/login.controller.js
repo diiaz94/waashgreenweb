@@ -9,6 +9,10 @@ import { Chats, Messages } from '../../../lib/collections';
 export default class LoginCtrl extends Controller {
   constructor() {
     super(...arguments);
+
+
+    this.$state.go('home');
+    
  
     this.helpers({
 
@@ -24,6 +28,22 @@ export default class LoginCtrl extends Controller {
         this.$state.go('home');
     });
    
+  }
+
+  loginWithFacebook () {
+    debugger;
+    Meteor.loginWithFacebook({
+      requestPermissions: ['public_profile', 'email']
+    }, (err) => {
+      debugger;
+      if (err) {
+        console.log(err);
+        // handle error
+      } else {
+        console.log("login =? ");
+        // successful login!
+      }
+    });
   }
 
   signup () {

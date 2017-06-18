@@ -5,15 +5,16 @@ import { Tasks } from '../../../lib/collections';
 export default class HomeCtrl extends Controller {
   constructor() {
     super(...arguments);
- 	Meteor.subscribe('allTask');
+ 	//Meteor.subscribe('allTask');
     this.helpers({
       data() {
-        return Tasks.find();
+        return [];
       }
     });
   }
 
   logout () {
+    debugger;
   	Meteor.logout((err) => {
         if (err) return  console.log('Login error - ', err);
         this.$state.go('login');

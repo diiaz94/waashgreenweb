@@ -10,7 +10,7 @@
 				          <img id = "logo" src="img/logo_waash_03.png" alt="Rounded Image" class="img-rounded">  
 				        </div>
 				        <div class="input-group input-full" style="text-align: center">
-				        	<label class="login-facebook"> <img src="/img/facebook-login.png" 
+				        	<label class="login-facebook" ng-click="logger.loginWithFacebook()"> <img src="/img/facebook-login.png" 
 				        	style="width:20px;height: 20px">
 				        	Inicia sesión con Facebook</label>
 				        	<div style="height: 2px;background-color: #5b6f98;"></div>
@@ -27,7 +27,7 @@
 					</div>
 					<div class="footer text-center footer-login">
 
-						<button type="button" class="btn-login btn btn-primary" >INGRESAR</button>
+						<button type="subtmit" class="btn-login btn btn-primary" >INGRESAR</button>
 						<div class="row footer-btn">
 							<div class="col-xs-6 col-sm-6 col-md-6">
 								<button type="button" class="btn btn-green btn-xs btn-responsive" style="float : left;" ng-click="logger.signup()">Regístrate<div class="ripple-container"></div></button>
