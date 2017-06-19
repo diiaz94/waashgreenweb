@@ -10,6 +10,8 @@ import 'angular-ui-router';
  
 // Modules
 import LoginCtrl from '../controllers/login.controller';
+import SignUpCtrl from '../controllers/sign-up.controller';
+import BeWaasherCtrl from '../controllers/be-waasher.controller';
 import HomeCtrl from '../controllers/home.controller';
 import CalendarFilter from '../filters/calendar.filter';
 import RoutesConfig from '../routes';
@@ -27,6 +29,8 @@ Angular.module(App, [
 
 new Loader(App)
   .load(LoginCtrl)
+  .load(SignUpCtrl)
+  .load(BeWaasherCtrl)
   .load(HomeCtrl)
   .load(CalendarFilter)
   .load(RoutesConfig);
