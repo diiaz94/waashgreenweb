@@ -1,4 +1,7 @@
 @media (max-width:768px) {
+	body{
+		background-color: white!important;
+	}
 	.row{
 		margin:0;
 		padding:0;

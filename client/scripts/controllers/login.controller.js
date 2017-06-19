@@ -43,8 +43,12 @@ export default class LoginCtrl extends Controller {
   }
 
   signup () {
+
+    this.$state.go('sign-up');
+    return;
   	if (_.isEmpty(this.user.username) || _.isEmpty(this.user.password) ) return;
   	console.log("voy");
+    debugger
 
   	var options = {
       username: this.user.username,
@@ -61,7 +65,9 @@ export default class LoginCtrl extends Controller {
     });
   }
 
-
+  beWaasher() {
+    this.$state.go('be-waasher');
+  }
 
 
 }
