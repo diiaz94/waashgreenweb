@@ -9,10 +9,6 @@ import { Chats, Messages } from '../../../lib/collections';
 export default class LoginCtrl extends Controller {
   constructor() {
     super(...arguments);
-
-
-    this.$state.go('home');
-    
  
     this.helpers({
 
