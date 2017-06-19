@@ -11,7 +11,7 @@ export default class BeWaasherCtrl extends Controller {
     super(...arguments);
 
 
-    this.$state.go('home');
+    //this.$state.go('home');
     
  
     this.helpers({
