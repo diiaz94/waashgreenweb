@@ -1,1 +1,41 @@
-hello world
+<div class="container">
+	
+	<div class="row">
+		<div class="main" id = "content-sign-up">
+			<div id="bar-top">
+				<img src="/img/back1600.png"/>
+				<div class="line-divider"></div>
+			</div>
+			<h3>Regístrate ahora y disfruta del mejor servicio de caarwash</h3>
+			<form class="form" ng-submit="signUp.login(signUp.user)" style="padding:3%;">
+
+				<div  class="content">
+			        <div class="input-group input-full" style="text-align: center">
+			        	<label class="login-facebook" ng-click="signUp.registerWithFacebook()"> <img src="/img/facebook-login.png" 
+			        	style="width:20px;height: 20px">
+			        	Regístrate con Facebook</label>
+			        	<div style="height: 2px;background-color: #5b6f98;"></div>
+					</div>
+
+					<div class="input-group input-full">
+
+						<input ng-model="signUp.user.username" type="text" class="form-control input-center" placeholder="Nombre">
+						<input ng-model="signUp.user.username" type="text" class="form-control input-center" placeholder="Apellido">
+						<input ng-model="signUp.user.username" type="text" class="form-control input-center" placeholder="Teléfono">
+						<input ng-model="signUp.user.username" type="email" class="form-control input-center" placeholder="Correo">
+					</div>
+				</div>
+				<div class="footer text-center footer-login">
+
+					<button type="subtmit" class="btn-login btn btn-primary" >ENVIAR</button>
+				</div>
+			</form>
+		</div>
+	
+	</div>
+</div>
+
+
+	
+
+

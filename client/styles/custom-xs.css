@@ -16,4 +16,18 @@
 	.footer-btn div{
 		padding: 0!important;
 	}
+
+	#bar-top {
+		display: block!important;
+		height: 35px;
+		margin-top: 10px;
+	}
+	#bar-top img {
+		width: 32px;
+	}
+	#bar-top .line-divider {
+		background-color: #c4c4c3;
+		height: 1px;
+		margin-top: 3px;
+	}
 }

@@ -20,7 +20,9 @@ export default class SignUpCtrl extends Controller {
   }
 
   
+  signUp(user){
 
+  }
   registerWithFacebook () {
     debugger;
     Meteor.loginWithFacebook({
