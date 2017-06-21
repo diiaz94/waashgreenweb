@@ -24,10 +24,11 @@
 	}
 	#bar-top img {
 		width: 32px;
+		margin-left: 5px
 	}
 	#bar-top .line-divider {
 		background-color: #c4c4c3;
 		height: 1px;
-		margin-top: 3px;
+		margin-top: 10px;
 	}
 }

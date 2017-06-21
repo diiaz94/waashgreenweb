@@ -3,10 +3,10 @@
 	<div class="row">
 		<div class="main" id = "content-sign-up">
 			<div id="bar-top">
-				<img src="/img/back1600.png"/>
+				<img src="/img/back1600.png" ui-sref="login"/>
 				<div class="line-divider"></div>
 			</div>
-			<h3>Regístrate ahora y disfruta del mejor servicio de caarwash</h3>
+			<h4>Regístrate ahora y disfruta del mejor servicio de caarwash</h4>
 			<form class="form" ng-submit="signUp.login(signUp.user)" style="padding:3%;">
 
 				<div  class="content">
@@ -23,11 +23,15 @@
 						<input ng-model="signUp.user.username" type="text" class="form-control input-center" placeholder="Apellido">
 						<input ng-model="signUp.user.username" type="text" class="form-control input-center" placeholder="Teléfono">
 						<input ng-model="signUp.user.username" type="email" class="form-control input-center" placeholder="Correo">
+						<dir>
+							<label class="check-with-text">Quiero recibir notificaciones y permitir el registro de ubicaciones <input ng-model="signUp.user.agree" type="checkbox" class="input-center" placeholder="Correo"/></label>
+							
+						</dir>
 					</div>
 				</div>
 				<div class="footer text-center footer-login">
 
-					<button type="subtmit" class="btn-login btn btn-primary" >ENVIAR</button>
+					<button type="subtmit" class="btn-sign-up btn login btn btn-primary" >ENVIAR</button>
 				</div>
 			</form>
 		</div>
