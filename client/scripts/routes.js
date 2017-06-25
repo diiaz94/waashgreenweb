@@ -2,6 +2,8 @@ import { _ } from 'meteor/underscore';
 import { Config, Runner } from 'angular-ecmascript/module-helpers';
  
 import loginTemplateUrl from '../templates/login.html';
+import singUpTemplateUrl from '../templates/sign-up.html';
+import beWaasherTemplateUrl from '../templates/be-waasher.html';
 import homeTemplateUrl from '../templates/home.html';
  
 class RoutesConfig extends Config {
@@ -17,6 +19,16 @@ class RoutesConfig extends Config {
         url: '/login',
         templateUrl: loginTemplateUrl,
         controller: 'LoginCtrl as logger'
+      })
+      .state('sign-up', {
+        url: '/sign-up',
+        templateUrl: singUpTemplateUrl,
+        controller: 'SignUpCtrl as signUp'
+      })
+      .state('be-waasher', {
+        url: '/be-waasher',
+        templateUrl: beWaasherTemplateUrl,
+        controller: 'BeWaasherCtrl as beWaasher'
       })
       .state('home', {
         url: '/home',

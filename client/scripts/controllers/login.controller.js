@@ -26,9 +26,29 @@ export default class LoginCtrl extends Controller {
    
   }
 
+  loginWithFacebook () {
+    debugger;
+    Meteor.loginWithFacebook({
+      requestPermissions: ['public_profile', 'email']
+    }, (err) => {
+      debugger;
+      if (err) {
+        console.log(err);
+        // handle error
+      } else {
+        console.log("login =? ");
+        // successful login!
+      }
+    });
+  }
+
   signup () {
+
+    this.$state.go('sign-up');
+    return;
   	if (_.isEmpty(this.user.username) || _.isEmpty(this.user.password) ) return;
   	console.log("voy");
+    debugger
 
   	var options = {
       username: this.user.username,
@@ -45,7 +65,9 @@ export default class LoginCtrl extends Controller {
     });
   }
 
-
+  beWaasher() {
+    this.$state.go('be-waasher');
+  }
 
 
 }

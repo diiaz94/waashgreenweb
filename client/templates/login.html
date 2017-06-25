@@ -1,47 +1,45 @@
 <div class="container">
 	<div class="row">
 			
-			<div class="main" id = "content-login">
-				
-				<form class="form" ng-submit="logger.login(logger.user)" style="padding:3%;">
+		<div class="main" id = "content-login">
+			
+			<form class="form" ng-submit="logger.login(logger.user)" style="padding:3%;">
 
-					<div  class="content">
-						<div class="row initial-logo">
-				          <img id = "logo" src="img/logo_waash_03.png" alt="Rounded Image" class="img-rounded">  
-				        </div>
-				        <div class="input-group input-full" style="text-align: center">
-				        	<label class="login-facebook"> <img src="/img/facebook-login.png" 
-				        	style="width:20px;height: 20px">
-				        	Inicia sesión con Facebook</label>
-				        	<div style="height: 2px;background-color: #5b6f98;"></div>
-						</div>
+				<div  class="content">
+					<div class="row initial-logo">
+			          <img id = "logo" src="img/logo_waash_03.png" alt="Rounded Image" class="img-rounded">  
+			        </div>
+			        <div class="input-group input-full" style="text-align: center">
+			        	<label class="login-facebook" ng-click="logger.loginWithFacebook()"> <img src="/img/facebook-login.png" 
+			        	style="width:20px;height: 20px">
+			        	Inicia sesión con Facebook</label>
+			        	<div style="height: 2px;background-color: #5b6f98;"></div>
+					</div>
 
-						<div class="input-group input-full">
+					<div class="input-group input-full">
 
-							<input ng-model="logger.user.username" type="email" class="form-control input-center" placeholder="Correo">
-						</div>
+						<input ng-model="logger.user.username" type="email" class="form-control input-center" placeholder="Correo">
+					</div>
 
-						<div class="input-group input-full">
-							<input ng-model="logger.user.password" type="password" class="form-control input-center" placeholder="Contraseña"/>
+					<div class="input-group input-full">
+						<input ng-model="logger.user.password" type="password" class="form-control input-center" placeholder="Contraseña"/>
+					</div>
+				</div>
+				<div class="footer text-center footer-login">
+
+					<button type="subtmit" class="btn-login btn btn-primary" >INGRESAR</button>
+					<div class="row footer-btn">
+						<div class="col-xs-6 col-sm-6 col-md-6">
+							<button type="button" class="btn btn-green btn-xs btn-responsive" style="float : left;" ui-sref="sign-up">Regístrate<div class="ripple-container"></div></button>
+						</div>	
+						<div class="col-xs-6 col-sm-6 col-md-6">
+							<button type="button" class="btn btn-green btn-xs btn-responsive" style="float : right;" 
+							ng-click="logger.beWaasher()">Conviértete en Washer<div class="ripple-container"></div></button>
 						</div>
 					</div>
-					<div class="footer text-center footer-login">
-
-						<button type="button" class="btn-login btn btn-primary" >INGRESAR</button>
-						<div class="row footer-btn">
-							<div class="col-xs-6 col-sm-6 col-md-6">
-								<button type="button" class="btn btn-green btn-xs btn-responsive" style="float : left;" ng-click="logger.signup()">Regístrate<div class="ripple-container"></div></button>
-							</div>	
-							<div class="col-xs-6 col-sm-6 col-md-6">
-								<button type="button" class="btn btn-green btn-xs btn-responsive" style="float : right;">Conviértete en Washer<div class="ripple-container"></div></button>
-							</div>
-						</div>
-					</div>
-					
-
-				</form>
-			</div>
-	
+				</div>
+			</form>
+		</div>
 	</div>
 </div>
 
