@@ -20,7 +20,15 @@ export default class SignUpCtrl extends Controller {
   }
 
   
-  signUp(user){
+  submit(user){
+    debugger;
+    if($(".step1").is(":visible")){
+      $(".step1").hide();
+      $(".step2").show();
+    }
+    if($(".step2").is(":visible")){
+      
+    }
 
   }
   registerWithFacebook () {
