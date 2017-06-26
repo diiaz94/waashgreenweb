@@ -21,9 +21,8 @@ var fixedTop = false;
 
 var navbar_initialized = false;
 
-$(document).ready(function(){
 
-    // Init Material scripts for buttons ripples, inputs animations etc, more info on the next link https://github.com/FezVrasta/bootstrap-material-design#materialjs
+export const initMaterialKit = function() {
     $.material.init();
 
     //  Activate the Tooltips
@@ -45,11 +44,10 @@ $(document).ready(function(){
     $('[data-toggle="popover"]').popover();
 
     // Active Carousel
-	$('.carousel').carousel({
+    $('.carousel').carousel({
       interval: 400000
     });
-
-});
+}
 
 materialKit = {
     misc:{

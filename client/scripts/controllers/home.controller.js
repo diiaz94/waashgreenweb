@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Controller } from 'angular-ecmascript/module-helpers';
 import { Tasks } from '../../../lib/collections';
+import { initMaterialKit } from '../lib/material-kit';
  
 export default class HomeCtrl extends Controller {
   constructor() {
@@ -11,6 +12,7 @@ export default class HomeCtrl extends Controller {
         return [];
       }
     });
+    initMaterialKit();
   }
 
   logout () {

@@ -6,6 +6,7 @@
 				<img src="/img/back1600.png" ui-sref="login"/>
 				<div class="line-divider"></div>
 			</div>
+			{{signUp.user}}
 			<h4 class="step1 title">Regístrate ahora y disfruta del mejor servicio de caarwash</h4>
 			<h4 class="step2 title" style="display:none;">Crea una contraseña para tu cuenta</h4>
 			<form class="form" ng-submit="signUp.submit(signUp.user)" style="padding:3%;">
@@ -18,11 +19,13 @@
 			        	<div style="height: 2px;background-color: #5b6f98;"></div>
 					</div>
 
+
+    
 					<div class="input-group input-full">
 
-						<input ng-model="signUp.user.username" type="text" class="form-control input-center" placeholder="Nombre">
-						<input ng-model="signUp.user.username" type="text" class="form-control input-center" placeholder="Apellido">
-						<input ng-model="signUp.user.username" type="text" class="form-control input-center" placeholder="Teléfono">
+						<input ng-model="signUp.user.firstName" type="text" class="form-control input-center" placeholder="Nombre">
+						<input ng-model="signUp.user.lastName" type="text" class="form-control input-center" placeholder="Apellido">
+						<input ng-model="signUp.user.phone" type="text" class="form-control input-center" placeholder="Teléfono">
 						<input ng-model="signUp.user.username" type="email" class="form-control input-center" placeholder="Correo">
 					</div>
 				</div>
@@ -30,7 +33,7 @@
 				<div class="step2 content" style="display:none;">
 			    	<div class="input-group input-full">
 
-						<input ng-model="signUp.user.RUT" type="text" class="form-control input-center" placeholder="RUT">
+						<input ng-model="signUp.user.rut" type="text" class="form-control input-center" placeholder="RUT">
 						<input ng-model="signUp.user.password" type="text" class="form-control input-center" placeholder="Contraseña">
 						<input ng-model="signUp.user.confirm_password" type="text" class="form-control input-center" placeholder="Confirmar Contraseña">
 						<div>
