@@ -6,13 +6,14 @@ import { initMaterialKit } from '../lib/material-kit';
 export default class HomeCtrl extends Controller {
   constructor() {
     super(...arguments);
- 	//Meteor.subscribe('allTask');
+ 	  Meteor.subscribe('users');
     this.helpers({
-      data() {
-        return [];
+      users() {
+        return Meteor.users.find();
       }
     });
     initMaterialKit();
+    console.log(this.currentUser);
   }
 
   logout () {
@@ -23,8 +24,14 @@ export default class HomeCtrl extends Controller {
     });
   }
 
-  remove (task) {
-    this.callMethod('removeTask', task._id);
+  deleteUser (userId) {
+    debugger;
+
+    this.callMethod('deleteUser', userId, function(error, result) {
+      console.log(error);
+      console.log(result);
+    });
+    
   }
 
   addTask (task) {

@@ -50,8 +50,6 @@ export default class SignUpCtrl extends Controller {
   
   signup () {
 
-    this.$state.go('sign-up');
-    return;
     if (_.isEmpty(this.user.username) || _.isEmpty(this.user.password) ) return;
     console.log("voy");
     debugger
@@ -60,15 +58,15 @@ export default class SignUpCtrl extends Controller {
       username: this.user.username,
       email: this.user.username,
       password: this.user.password,
-      firstName: this.user.firstName,
-      lastName: this.user.lastName,
-      rut: this.user.rut,
-      region : "", //TODO: falta
-      comuna :"", //TODO: Falta
-      phone: this.user.phone,
-      rol: "Cliente", //TODO: verificar si siempre será cliente
       profile: {
-        createdOn: new Date()
+        createdOn: new Date(),
+        firstName: this.user.firstName,
+        lastName: this.user.lastName,
+        rut: this.user.rut,
+        region : "", //TODO: falta
+        comuna :"", //TODO: Falta
+        phone: this.user.phone,
+        rol: "Cliente" //TODO: verificar si siempre será cliente
       }
     };
 

@@ -23,30 +23,32 @@ var navbar_initialized = false;
 
 
 export const initMaterialKit = function() {
-    $.material.init();
+    setTimeout(function(){
+        $.material.init();
 
-    //  Activate the Tooltips
-    $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
+        //  Activate the Tooltips
+        $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
 
-    // Activate Datepicker
-    if($('.datepicker').length != 0){
-        $('.datepicker').datepicker({
-             weekStart:1
+        // Activate Datepicker
+        if($('.datepicker').length != 0){
+            $('.datepicker').datepicker({
+                 weekStart:1
+            });
+        }
+
+        // Check if we have the class "navbar-color-on-scroll" then add the function to remove the class "navbar-transparent" so it will transform to a plain color.
+        if($('.navbar-color-on-scroll').length != 0){
+            $(window).on('scroll', materialKit.checkScrollForTransparentNavbar)
+        }
+
+        // Activate Popovers
+        $('[data-toggle="popover"]').popover();
+
+        // Active Carousel
+        $('.carousel').carousel({
+          interval: 400000
         });
-    }
-
-    // Check if we have the class "navbar-color-on-scroll" then add the function to remove the class "navbar-transparent" so it will transform to a plain color.
-    if($('.navbar-color-on-scroll').length != 0){
-        $(window).on('scroll', materialKit.checkScrollForTransparentNavbar)
-    }
-
-    // Activate Popovers
-    $('[data-toggle="popover"]').popover();
-
-    // Active Carousel
-    $('.carousel').carousel({
-      interval: 400000
-    });
+    },0);
 }
 
 materialKit = {

@@ -39,6 +39,7 @@ export default class LoginCtrl extends Controller {
       } else {
         console.log("login =? ");
         // successful login!
+        this.$state.go('home');
       }
     });
   }
