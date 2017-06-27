@@ -17,7 +17,6 @@ export default class HomeCtrl extends Controller {
   }
 
   logout () {
-    debugger;
   	Meteor.logout((err) => {
         if (err) return  console.log('Login error - ', err);
         this.$state.go('login');
@@ -25,11 +24,14 @@ export default class HomeCtrl extends Controller {
   }
 
   deleteUser (userId) {
-    debugger;
 
     this.callMethod('deleteUser', userId, function(error, result) {
-      console.log(error);
-      console.log(result);
+      if (result == 1) { //success
+        alert("registro eliminado exitosamente");
+      }
+      else {
+        alert("error al eliminar registro");
+      }
     });
     
   }
