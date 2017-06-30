@@ -17,10 +17,27 @@ Meteor.startup(() => {
 
 	Accounts.onCreateUser(function (options, user) {
 		console.log("login server");
-		
+
+
 		if (!user.services.facebook) {
-		    return user;
+		    
+	    if (options.profile) {
+	    	console.log("profileeee");
+		    user.profile = options.profile;
+		  }
+
+		} else {
+			user.profile = {
+				firstName : user.services.facebook.first_name,
+				lastName : user.services.facebook.last_name,
+				rol : "Cliente",
+				rut : "",
+				comuna : "",
+				phone : ""
+			};
+			user.username = user.services.facebook.email;
 		}
+
 		return user;
 	});
 });

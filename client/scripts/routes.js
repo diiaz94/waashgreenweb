@@ -3,6 +3,7 @@ import { Config, Runner } from 'angular-ecmascript/module-helpers';
  
 import loginTemplateUrl from '../templates/login.html';
 import singUpTemplateUrl from '../templates/sign-up.html';
+import singUpCompletedTemplateUrl from '../templates/sign-up-completed.html';
 import beWaasherTemplateUrl from '../templates/be-waasher.html';
 import homeTemplateUrl from '../templates/home.html';
  
@@ -23,6 +24,11 @@ class RoutesConfig extends Config {
       .state('sign-up', {
         url: '/sign-up',
         templateUrl: singUpTemplateUrl,
+        controller: 'SignUpCtrl as signUp'
+      })
+      .state('sign-up-completed', {
+        url: '/sign-up',
+        templateUrl: singUpCompletedTemplateUrl,
         controller: 'SignUpCtrl as signUp'
       })
       .state('be-waasher', {

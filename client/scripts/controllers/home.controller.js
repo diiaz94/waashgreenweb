@@ -1,28 +1,39 @@
 import { Meteor } from 'meteor/meteor';
 import { Controller } from 'angular-ecmascript/module-helpers';
 import { Tasks } from '../../../lib/collections';
+import { initMaterialKit } from '../lib/material-kit';
  
 export default class HomeCtrl extends Controller {
   constructor() {
     super(...arguments);
- 	//Meteor.subscribe('allTask');
+ 	  Meteor.subscribe('users');
     this.helpers({
-      data() {
-        return [];
+      users() {
+        return Meteor.users.find();
       }
     });
+    initMaterialKit();
+    console.log(this.currentUser);
   }
 
   logout () {
-    debugger;
   	Meteor.logout((err) => {
         if (err) return  console.log('Login error - ', err);
         this.$state.go('login');
     });
   }
 
-  remove (task) {
-    this.callMethod('removeTask', task._id);
+  deleteUser (userId) {
+
+    this.callMethod('deleteUser', userId, function(error, result) {
+      if (result == 1) { //success
+        alert("registro eliminado exitosamente");
+      }
+      else {
+        alert("error al eliminar registro");
+      }
+    });
+    
   }
 
   addTask (task) {

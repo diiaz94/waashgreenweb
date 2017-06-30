@@ -2,85 +2,57 @@
   <!-- you can use the class main-raised if you want the main area to be as a page with shadows -->
 <div class="container">
     <div class="row">
+
+
             
     <div class="main">
 
         <ul class="nav nav-tabs" style="margin-bottom: 15px;">
-  <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-  <li class="active"><button class="button" ng-click="home.logout()">Logout</button></li>
-  
+          <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+          <li style="float: right;"><button class="btn btn-white" ng-click="home.logout()">Logout</button></li>
+          
 
-</ul>
+        </ul>
+              <!-- here you can add your content -->
 
-      <!-- here you can add your content -->
-      <table class="table">
-    <thead>
-        <tr>
-            <th class="text-center">#</th>
-            <th>Name</th>
-            <th>Job Position</th>
-            <th>Since</th>
-            <th class="text-right">Salary</th>
-            <th class="text-right">Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="text-center">1</td>
-            <td>Andrew Mike</td>
-            <td>Develop</td>
-            <td>2013</td>
-            <td class="text-right">&euro; 99,225</td>
-            <td class="td-actions text-right">
-                <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
-                    <i class="fa fa-user"></i>
-                </button>
-                <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
-                    <i class="fa fa-edit"></i>
-                </button>
-                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                    <i class="fa fa-times"></i>
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td class="text-center">2</td>
-            <td>John Doe</td>
-            <td>Design</td>
-            <td>2012</td>
-            <td class="text-right">&euro; 89,241</td>
-            <td class="td-actions text-right">
-                <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
-                    <i class="fa fa-user"></i>
-                </button>
-                <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
-                    <i class="fa fa-edit"></i>
-                </button>
-                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                    <i class="fa fa-times"></i>
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td class="text-center">3</td>
-            <td>Alex Mike</td>
-            <td>Design</td>
-            <td>2010</td>
-            <td class="text-right">&euro; 92,144</td>
-            <td class="td-actions text-right">
-                <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
-                    <i class="fa fa-user"></i>
-                </button>
-                <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
-                    <i class="fa fa-edit"></i>
-                </button>
-                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                    <i class="fa fa-times"></i>
-                </button>
-            </td>
-        </tr>
-    </tbody>
-</table>
+        <label style="margin-left: 2%;">Bienvenido {{home.currentUser.profile.firstName + " " +  home.currentUser.profile.lastName}}</label>
+
+        <h3 style="text-align: center;">Usuarios registrados en el sistema</h3>
+
+        <div class="table-responsive">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center">ID</th>
+                        <th>Email</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>RUT</th>
+                        <th>phone</th>
+                        <th>Rol</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in home.users">
+                        <td class="text-center">{{user._id}}</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.profile.firstName}}</td>
+                        <td>{{user.profile.lastName}}</td>
+                        <td>{{user.profile.rut}}</td>
+                        <td>{{user.profile.phone}}</td>
+                        <td>{{user.profile.rol}}</td>
+                        <td class="td-actions">
+                            <button type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" ng-click="home.deleteUser(user._id)">
+                                <i class="fa fa-times"></i>
+                            </button>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
   </div>
