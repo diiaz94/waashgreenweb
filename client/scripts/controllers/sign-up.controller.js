@@ -32,6 +32,10 @@ export default class SignUpCtrl extends Controller {
     }
 
   }
+  goToLogin(){
+   this.$state.go('login');
+
+  }
   registerWithFacebook () {
     debugger;
     Meteor.loginWithFacebook({
@@ -72,7 +76,7 @@ export default class SignUpCtrl extends Controller {
 
     Accounts.createUser(options, (err) => {
         if (err) return  console.log('Login error - ', err);
-        this.$state.go('home');
+        this.$state.go('sign-up-completed');
     });
   }
 
