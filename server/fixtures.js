@@ -65,7 +65,8 @@ if ( Cars.find().count() === 0){
     brand: 'Chevrolet',
     model: 'Optra',
     pic: 'location.com/auto.pic',
-    CartypeId: "1"
+    CartypeId: "1",
+    userId: "2"
   });
 
   Cars.insert({
@@ -74,7 +75,8 @@ if ( Cars.find().count() === 0){
     brand: 'Jeep',
     model: 'Machito',
     pic: 'location.com/auto2.pic',
-    CartypeId: "3"
+    CartypeId: "3",
+    userId: "2"
   });
 }
 
@@ -160,8 +162,8 @@ if ( Orders.find().count() === 0 ) {
     requestDate: '08-06-2017',
     requestHour: '21:00',
     address: 'Av. Ferreira. Edif. Lucia. Estacionamiento S1.',
-    clientID: "2",
-    washerID: "3",
+    clientId: "2",
+    washerId: "3",
     carId: "1",
     latitude: '-5422588',
     longitude: '3544944',
