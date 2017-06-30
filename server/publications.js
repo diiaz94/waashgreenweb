@@ -1,7 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Tasks } from '../lib/collections';
 
-<<<<<<< HEAD
 // Meteor.publish('users', function() {
 //   return Meteor.users.find({}, { fields: { profile: 1 } });
 // });
