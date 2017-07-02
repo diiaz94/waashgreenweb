@@ -1,19 +1,39 @@
 import { Meteor } from 'meteor/meteor';
 import { Controller } from 'angular-ecmascript/module-helpers';
-import { Tasks } from '../../../lib/collections';
+
+import { CarTypes, Supplies, Cars, Orders } from '../../../lib/collections';
+
 import { initMaterialKit } from '../lib/material-kit';
  
 export default class HomeCtrl extends Controller {
   constructor() {
     super(...arguments);
+
  	  Meteor.subscribe('users');
+    Meteor.subscribe('allCarTypes');
+    Meteor.subscribe('allSupplies');
+    Meteor.subscribe('allCars');
+    Meteor.subscribe('allOrders');
+
+
     this.helpers({
       users() {
         return Meteor.users.find();
+      },
+      CarTypes() {
+        return CarTypes.find();
+      },
+      Supplies() {
+        return Supplies.find();
+      },
+      Cars() {
+        return Cars.find();
+      },
+      Orders() {
+        return Orders.find();
       }
     });
     initMaterialKit();
-    console.log(this.currentUser);
   }
 
   logout () {
@@ -27,18 +47,13 @@ export default class HomeCtrl extends Controller {
 
     this.callMethod('deleteUser', userId, function(error, result) {
       if (result == 1) { //success
-        alert("registro eliminado exitosamente");
+        toastr.success("registro eliminado exitosamente");
       }
       else {
-        alert("error al eliminar registro");
+        toastr.success("error al eliminar registro");
       }
     });
     
-  }
-
-  addTask (task) {
-  	this.callMethod('addTask', task);
-  	this.newTask.text = "";
   }
 
 }

@@ -1,0 +1,46 @@
+<div class="container">
+	
+	<div class="row">
+		<div class="main" id = "content-sign-up">
+			<div id="bar-top">
+				<img src="/img/back1600.png" ui-sref="login"/>
+				<div class="line-divider"></div>
+			</div>
+			<div class="row initial-logo">
+			    <img id = "logo" src="img/logo_waash_03.png" alt="Rounded Image" class="img-rounded">  
+			</div>
+			<h4 class="step1 title">Completa tu registro</h4>
+			<h4 class="step2 title" style="display:none;">Crea una contraseña para tu cuenta</h4>
+			<form class="form" ng-submit="complete.submit(complete.user)" style="padding:3%;">
+
+
+				<div class="content">
+
+			    	<div class="input-group input-full">
+
+			    		<input ng-model="complete.user.phone" type="text" class="form-control input-center" placeholder="Teléfono">
+						<input ng-model="complete.user.rut" type="text" class="form-control input-center" placeholder="RUT">
+						<input ng-model="complete.user.password" type="password" class="form-control input-center" placeholder="Contraseña">
+						<input ng-model="complete.user.confirm_password" type="password" class="form-control input-center" placeholder="Confirmar Contraseña">
+						<div class="checkbox">
+				          <label>Quiero recibir notificaciones y permitir el registro de ubicaciones
+				          <input ng-model="complete.user.agree" type="checkbox"></label>
+				        </div>
+
+					</div>
+
+				</div>
+				<div class="footer text-center footer-login">
+
+					<button type="submit" class="btn-sign-up btn login btn btn-primary">ENVIAR</button>
+				</div>
+			</form>
+		</div>
+	
+	</div>
+</div>
+
+
+	
+
+

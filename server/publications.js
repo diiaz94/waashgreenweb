@@ -1,9 +1,13 @@
 import { Meteor } from 'meteor/meteor';
-import { Tasks } from '../lib/collections';
 
-// Meteor.publish('users', function() {
-//   return Meteor.users.find({}, { fields: { profile: 1 } });
-// });
+import { CarTypes } from '../lib/collections';
+import { Supplies } from '../lib/collections';
+import { Cars } from '../lib/collections';
+import { Orders } from '../lib/collections';
+
+Meteor.publish('users', function() {
+   return Meteor.users.find({}, { fields: { profile: 1 } });
+});
 
 
 Meteor.publish('allCarTypes', function(){
@@ -33,4 +37,8 @@ Meteor.publish('washerOrders', function(){
 Meteor.publish('clientOrders', function(){	
 	currentUser = this.userId;
 	return Orders.find({ clientId: currentUser });
+});
+
+Meteor.publish('allCars', function(){ //TODO: Eliminar ,esta de prueba para mostrar en home.html
+	return Cars.find();
 });
