@@ -2,7 +2,6 @@ import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import { Controller } from 'angular-ecmascript/module-helpers';
 import { Chats, Messages } from '../../../lib/collections';
-import { initMaterialKit } from '../lib/material-kit';
 
 
 
@@ -10,10 +9,10 @@ import { initMaterialKit } from '../lib/material-kit';
 export default class LoginCtrl extends Controller {
   constructor() {
     super(...arguments);
+    $('body').bootstrapMaterialDesign();
     this.helpers({
 
     });
-    initMaterialKit();
   }
 
   login (user) {

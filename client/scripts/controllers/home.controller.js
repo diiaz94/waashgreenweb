@@ -1,18 +1,17 @@
 import { Meteor } from 'meteor/meteor';
 import { Controller } from 'angular-ecmascript/module-helpers';
 import { Tasks } from '../../../lib/collections';
-import { initMaterialKit } from '../lib/material-kit';
  
 export default class HomeCtrl extends Controller {
   constructor() {
     super(...arguments);
  	  Meteor.subscribe('users');
+    $('body').bootstrapMaterialDesign();
     this.helpers({
       users() {
         return Meteor.users.find();
       }
     });
-    initMaterialKit();
     console.log(this.currentUser);
   }
 

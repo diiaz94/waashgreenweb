@@ -21,9 +21,7 @@ angular-templates
 fourseven:scss
 check
 accounts-password
-twbs:bootstrap
 rajit:bootstrap3-datepicker
-fezvrasta:bootstrap-material-design
 service-configuration
 accounts-facebook
 momentjs:moment

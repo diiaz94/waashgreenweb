@@ -1,7 +1,40 @@
-<div class="container">
+
 	
 	<div class="row">
 		<div class="main" id = "content-sign-up">
+
+
+
+		<a href="javascript:void(0)" class="btn btn-primary">Primary</a>
+		<a href="javascript:void(0)" class="btn btn-raised btn-primary">Primary</a>
+
+		<h1 class="header">Dropdown</h1>
+
+		<div class="sample">
+		  <div class="form-group">
+		    <label for="s1">Your favorite pastry</label>
+		    <select id="s1" class="form-control">
+		      <option value="Apple fritter">Apple fritter</option>
+		      <option value="Croissant">Croissant</option>
+		      <option value="Donut">Donut</option>
+		      <option value="Financier">Financier</option>
+		      <option value="Jello">Jello</option>
+		      <option value="Madeleine">Madeleine</option>
+		      <option value="Pound cake">Pound cake</option>
+		      <option value="Pretzel">Pretzel</option>
+		      <option value="Sfogliatelle">Sfogliatelle</option>
+		    </select>
+		  </div>
+		  <br>
+
+		  <div class="form-group">
+		    <label for="s2">Your favorite pastry</label>
+		    <select id="s2" class="form-control" disabled="">
+		      <option value="disabled">Disabled</option>
+		    </select>
+		  </div>
+		</div>
+		<br>
 			<div id="bar-top">
 				<img src="/img/back1600.png" ui-sref="login"/>
 				<div class="line-divider"></div>
@@ -37,4 +70,11 @@
 		</div>
 	
 	</div>
-</div>
+
+
+
+
+    <script>
+      $('body').bootstrapMaterialDesign();
+      $("select").dropdown({"optionClass": "withripple"});
+    </script>

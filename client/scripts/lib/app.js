@@ -41,5 +41,9 @@ Angular.element(document).ready(onReady);
 
  
 function onReady() {
-  Angular.bootstrap(document, [App]);
+    try{
+    Angular.bootstrap(document, [App]);
+  }catch(e){
+      console.log("error",e);
+    }
 }
