@@ -13,9 +13,9 @@ import LoginCtrl from '../controllers/login.controller';
 import SignUpCtrl from '../controllers/sign-up.controller';
 import BeWaasherCtrl from '../controllers/be-waasher.controller';
 import HomeCtrl from '../controllers/home.controller';
+import CompleteCtrl from '../controllers/complete.controller';
 import CalendarFilter from '../filters/calendar.filter';
 import RoutesConfig from '../routes';
-
 
  
 const App = 'WaashGreen';
@@ -34,7 +34,8 @@ new Loader(App)
   .load(BeWaasherCtrl)
   .load(HomeCtrl)
   .load(CalendarFilter)
-  .load(RoutesConfig);
+  .load(RoutesConfig)
+  .load(CompleteCtrl);
  
 
 Angular.element(document).ready(onReady);

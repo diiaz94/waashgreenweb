@@ -1,4 +1,7 @@
-import { Tasks } from '../lib/collections';
+import { CarTypes } from '../lib/collections';
+import { Supplies } from '../lib/collections';
+import { Cars } from '../lib/collections';
+import { Orders } from '../lib/collections';
 
 /* Seed to start the app */
 

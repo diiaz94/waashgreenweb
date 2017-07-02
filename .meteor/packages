@@ -25,3 +25,5 @@ rajit:bootstrap3-datepicker
 service-configuration
 accounts-facebook
 momentjs:moment
+mikael:accounts-merge
+chrismbeckett:toastr

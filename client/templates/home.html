@@ -37,7 +37,7 @@
                 <tbody>
                     <tr ng-repeat="user in home.users">
                         <td class="text-center">{{user._id}}</td>
-                        <td>{{user.username}}</td>
+                        <td>{{user.profile.email}}</td>
                         <td>{{user.profile.firstName}}</td>
                         <td>{{user.profile.lastName}}</td>
                         <td>{{user.profile.rut}}</td>
@@ -49,6 +49,124 @@
                             </button>
                         </td>
                         
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 style="text-align: center;">Tipos de Carros registrados</h3>
+
+        <div class="table-responsive">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center">ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="carType in home.CarTypes">
+                        <td class="text-center">{{carType._id}}</td>
+                        <td>{{carType.name}}</td>
+                        <td>{{carType.description}}</td>
+                        <td>{{carType.rate}}</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 style="text-align: center;">Suministros registrados</h3>
+
+        <div class="table-responsive">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center">ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Unidad Medida</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="supplie in home.Supplies">
+                        <td class="text-center">{{supplie._id}}</td>
+                        <td>{{supplie.name}}</td>
+                        <td>{{supplie.description}}</td>
+                        <td>{{supplie.unidadMedida}}</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 style="text-align: center;">Carros registrados</h3>
+
+        <div class="table-responsive">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center">ID</th>
+                        <th>Color</th>
+                        <th>Patante</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Foto</th>
+                        <th>Tipo de Carro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="car in home.Cars">
+                        <td class="text-center">{{car._id}}</td>
+                        <td>{{car.color}}</td>
+                        <td>{{car.patante}}</td>
+                        <td>{{car.brand}}</td>
+                        <td>{{car.model}}</td>
+                        <td>{{car.pic}}</td>
+                        <td>{{car.CartypeId}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 style="text-align: center;">Ordenes registradas</h3>
+
+        <div class="table-responsive">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center">ID</th>
+                        <th>Fecha de Creación</th>
+                        <th>Fecha de Solicitud</th>
+                        <th>Hora</th>
+                        <th>Dirección</th>
+                        <th>ID de cliente</th>
+                        <th>ID de Washer</th>
+                        <th>ID de Carro</th>
+                        <th>Latitud</th>
+                        <th>Longitud</th>
+                        <th>Estatus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="order in home.Orders">
+                        <td class="text-center">{{order._id}}</td>
+                        <td>{{order.createAt}}</td>
+                        <td>{{order.requestDate}}</td>
+                        <td>{{order.requestHour}}</td>
+                        <td>{{order.address}}</td>
+                        <td>{{order.clientID}}</td>
+                        <td>{{order.washerID}}</td>
+                        <td>{{order.carId}}</td>
+                        <td>{{order.latitude}}</td>
+                        <td>{{order.longitude}}</td>
+                        <td>{{order.status}}</td>
                     </tr>
                 </tbody>
             </table>

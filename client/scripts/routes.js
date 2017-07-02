@@ -6,6 +6,7 @@ import singUpTemplateUrl from '../templates/sign-up.html';
 import singUpCompletedTemplateUrl from '../templates/sign-up-completed.html';
 import beWaasherTemplateUrl from '../templates/be-waasher.html';
 import homeTemplateUrl from '../templates/home.html';
+import completeTemplateUrl from '../templates/complete.html';
  
 class RoutesConfig extends Config {
   
@@ -40,6 +41,14 @@ class RoutesConfig extends Config {
         url: '/home',
         templateUrl: homeTemplateUrl,
         controller: 'HomeCtrl as home',
+        resolve: {
+          user: this.isAuthorized
+        }
+      })
+      .state('complete', {
+        url: '/complete-register',
+        templateUrl: completeTemplateUrl,
+        controller: 'CompleteCtrl as complete',
         resolve: {
           user: this.isAuthorized
         }

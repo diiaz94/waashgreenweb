@@ -1,44 +1,57 @@
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import { Controller } from 'angular-ecmascript/module-helpers';
-import { Chats, Messages } from '../../../lib/collections';
-
 
 
 
 export default class LoginCtrl extends Controller {
   constructor() {
     super(...arguments);
-    $('body').bootstrapMaterialDesign();
-    this.helpers({
 
-    });
+
+    const $scope = this;
+    Meteor.subscribe('users');
+    $scope.loadingLogin = true;
+   $('body').bootstrapMaterialDesign();
+    $scope.$timeout(function(){$scope.showContentMain($scope)},1000);
+
   }
 
+  showContentMain($scope) { //hide splash
+    $scope.loadingLogin=false;
+  }
+
+
   login (user) {
-    debugger;
-  	if (_.isEmpty(user) || _.isEmpty(user.username) || _.isEmpty(user.password) ) return;
- 		debugger;
+  	if (_.isEmpty(user) || _.isEmpty(user.username) || _.isEmpty(user.password) ) {
+      toastr.error("Por favor rellene todos los campos");
+    }
  		Meteor.loginWithPassword(user.username, user.password, (err) => {
-        if (err) return  console.log('Login error - ', err);
+      if (err) {
+        toastr.error("Ha ocurrido un error! Intente nuevamente");
+      }
+      else {
         this.$state.go('home');
+      }
     });
    
   }
 
   loginWithFacebook () {
-    debugger;
     Meteor.loginWithFacebook({
       requestPermissions: ['public_profile', 'email']
     }, (err) => {
-      debugger;
       if (err) {
-        console.log(err);
-        // handle error
+        console.log(err.reason);
+        toastr.error("Ha ocurrido un error! Intente nuevamente");
       } else {
-        console.log("login =? ");
-        // successful login!
-        this.$state.go('home');
+        toastr.success("Inicio exitoso de sessión");
+        if (Meteor.user().profile.isComplete) {
+          this.$state.go('home');
+        }
+        else {
+         this.$state.go('complete'); 
+        }
       }
     });
   }
@@ -51,5 +64,5 @@ export default class LoginCtrl extends Controller {
 }
  
 LoginCtrl.$name = 'LoginCtrl';
-LoginCtrl.$inject = ['$state'];
+LoginCtrl.$inject = ['$state', '$timeout'];
 
