@@ -114,14 +114,39 @@
 }
 
 
-.container{
-background-color: #ffffff;
-margin-top: 25px;
-padding-bottom: 200px;
+
+
+body {
+	background:#0E481E !important;   
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	     	
 }
-.container  h5{
+
+
+#content-be-waasher h5 {
 	color: #c4c4c3;
+	padding: 30px;
 	font-size: 30px;
 	text-align: center;
-    padding-top: 6%;
 }
+#content-be-waasher .btn-be-waasher {
+	margin-top: 60px;
+	width: 80%;
+}
+
+#content-be-waasher input {
+	margin-top: 10px;
+}
+
+#content-be-waasher  .check-with-text {
+	width: 100%;
+	margin-top: 15px;
+	text-align: center;
+}
+
+
+
+
+
