@@ -1,52 +1,52 @@
-<div class="container">	
-	<div class="row" >
-		
-			<div id="bar-top">
+
+
+<div class="container" >
+<div class="row">
+	<div class="main" id = "content-be-waasher">
+	        <div id="bar-top">
 				<img src="/img/back1600.png" ui-sref="login"/>
 				<div class="line-divider"></div>
 			</div>
-			<h5>Solicitud de Registro</h5>
-			<form class="form" ng-submit="signUp.login(signUp.user)" style="padding:3%;">
+		<h5 class="step1 title">Solicitud de Registro</h5> 	
 
-				<div  class="step1">
-			        <div class="input-group input-full" style="text-align: center">
-			        	<label class="login-facebook" ng-click="signUp.registerWithFacebook()"> <img src="/img/facebook-login.png" 
-			        	style="width:20px;height: 20px">
-			        	Regístrate con Facebook</label>
-			        	<div style="height: 2px;background-color: #5b6f98;"></div>
+
+		<form class = "form-horizontal"  ng-submit="signUp.submit(signUp.user)" style="padding:1%;"> 
+
+		    <div class="step1 content">
+				<div class="input-group" style="text-align: center;">
+					<label class="login-facebook" ng-click="signUp.registerWithFacebook()"> <img src="/img/facebook-login.png" style="width:20px;height: 20px"> Regístrate con Facebook</label>
+					<div class = "line-divider" style="height: 2px;background-color: #5b6f98;"></div> 			
+				</div>
+
+				<div class="form-control ">
+					 <input ng-model="signUp.user.firstName" type="text" class="form-control input-center" placeholder="Nombre">
+					 <input ng-model="signUp.user.lastName" type="text" class="form-control input-center" placeholder="Apellido">
+					 <input ng-model="signUp.user.phone" type="text" class="form-control input-center" placeholder="Teléfono">
+					 <input ng-model="signUp.user.username" type="email" class="form-control input-center" placeholder="Correo">
+					  <input ng-model="signUp.user.phone" type="text" class="form-control input-center" placeholder="Fecha de nacimiento">
+				
+					<div class="form-group label-floating">
+					    <label for="t1" class="control-label">Dirección</label>
+					    <textarea id="t1" class="form-control"></textarea>
 					</div>
 
-					<div class="form-control input-center">                        
-						<input ng-model="signUp.user.username" type="text" class="form-control input-center" placeholder="Nombre">
-						<input ng-model="signUp.user.username" type="text" class="form-control input-center" placeholder="Apellido">
-						<input ng-model="signUp.user.username" type="text" class="form-control input-center" placeholder="Teléfono">
-						<input ng-model="signUp.user.username" type="email" class="form-control input-center" placeholder="Correo">
-							
-							<div class="sample">
-							  <div class="form-group">
-							    <label for="s1">Your favorite pastry</label>
-							    <select id="s1" class="form-control">
-							      <option value="Apple fritter">Apple fritter</option>
-							      <option value="Croissant">Croissant</option>
-							      <option value="Donut">Donut</option>
-							      <option value="Financier">Financier</option>
-							      <option value="Jello">Jello</option>
-							      <option value="Madeleine">Madeleine</option>
-							      <option value="Pound cake">Pound cake</option>
-							      <option value="Pretzel">Pretzel</option>
-							      <option value="Sfogliatelle">Sfogliatelle</option>
-							    </select>
-							  </div>
-						    </div>
-						 
-				    </div>
+						<div class="sample">
+						  <div class="form-group">
+						    <label for="s1">Nacionalidad</label>
+						    <select id="s1" class="form-control">
+						      <option value="Apple fritter">Chile</option>
+						      <option value="Croissant">Venezuela</option>
+						      <option value="Donut">Canada</option>
+						      <option value="Financier">Uruguay</option>
+						    </select>
+						  </div>
+						</div>  
 
-				</div>    
-
-				<div class="form-control text-center">
-					<button type="subtmit" style="margin-top:22% ; margin-left: 45%" class="btn-sign-up btn login btn btn-primary" >ENVIAR</button>
+					<button type="submit" class="btn btn-be-waasher btn-raised btn-success">ENVIAR</button> 
 				</div>
-			</form>
+			</div>
+			    
+		</form>	
+	</div>	
 	</div>
-</div>	
-	
+</div>
