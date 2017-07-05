@@ -2,9 +2,6 @@ import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import { Controller } from 'angular-ecmascript/module-helpers';
 
-
-
-
 export default class BeWaasherCtrl extends Controller {
   constructor() {
     super(...arguments);
@@ -17,8 +14,17 @@ export default class BeWaasherCtrl extends Controller {
 
     });
   }
-
   
+submit(user){
+    if($(".step1").is(":visible")){
+      $(".step1").hide();
+      $(".step2").show();
+    }
+    else if($(".step2").is(":visible")){
+      this.beWaasher();
+    }
+
+  }
 
   registerWithFacebook () {
     debugger;
