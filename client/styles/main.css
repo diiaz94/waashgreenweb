@@ -115,7 +115,7 @@
 }
 
 #content-be-waasher .btn-be-waasher {
-	margin-top: 60px;
+	margin-top: 40px;
 	width: 100%;
 }
 
@@ -125,7 +125,7 @@
 
 #content-be-waasher .check-with-text {
 	width: 100%;
-	margin-top: 60%;
+	margin-top: 15px;
 	text-align: center;
 }
 
@@ -136,8 +136,15 @@
 }
 
 #be-waasher-form{
+	margin: 0 auto;	
+}
+#be-waasher-form .form-group{
 	margin: 0 auto;
 }
+#be-waasher-form .sample{
+	margin-bottom: 2%;
+}
+
 
 #login-form{
 	margin: 0 auto;
