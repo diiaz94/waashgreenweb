@@ -1,52 +1,77 @@
-
-
 <div class="container" >
-<div class="row">
+	
+
 	<div class="main" id = "content-be-waasher">
-	        <div id="bar-top">
-				<img src="/img/back1600.png" ui-sref="login"/>
-				<div class="line-divider"></div>
-			</div>
-		<h5 class="step1 title">Solicitud de Registro</h5> 	
 
+		<div class="row">
 
-		<form class = "form-horizontal"  ng-submit="signUp.submit(signUp.user)" style="padding:1%;"> 
+			<div class="col-xs-12 col-sm-8 col-md-8">
 
-		    <div class="step1 content">
-				<div class="input-group" style="text-align: center;">
-					<label class="login-facebook" ng-click="signUp.registerWithFacebook()"> <img src="/img/facebook-login.png" style="width:20px;height: 20px"> Regístrate con Facebook</label>
-					<div class = "line-divider" style="height: 2px;background-color: #5b6f98;"></div> 			
+				<h5 class="step1 title">Solicitud de Registro</h5> 	
+				<div class="input-group input-full" style="text-align: center">
+					    	<label class="login-facebook" ng-click="logger.loginWithFacebook()"> <img src="/img/facebook-login.png" 
+					    	style="width:20px;height: 20px">
+					    	Inicia sesión con Facebook</label>			    	
 				</div>
-
-				<div class="form-control ">
-					 <input ng-model="signUp.user.firstName" type="text" class="form-control input-center" placeholder="Nombre">
-					 <input ng-model="signUp.user.lastName" type="text" class="form-control input-center" placeholder="Apellido">
-					 <input ng-model="signUp.user.phone" type="text" class="form-control input-center" placeholder="Teléfono">
-					 <input ng-model="signUp.user.username" type="email" class="form-control input-center" placeholder="Correo">
-					  <input ng-model="signUp.user.phone" type="text" class="form-control input-center" placeholder="Fecha de nacimiento">
-				
-					<div class="form-group label-floating">
-					    <label for="t1" class="control-label">Dirección</label>
-					    <textarea id="t1" class="form-control"></textarea>
+		        <div style="height: 2px;background-color: #5b6f98;"></div>
+				<form id ="be-waasher-form" class="form" ng-submit="logger.login(logger.user)" >
+					
+					<div class="form-group">
+						<label for="InputNombre" class="bmd-label-floating">Nombre</label>
+						<input ng-model="beWaasher.user.firstName" type="text" class="form-control" id="exampleInputEmail1">
 					</div>
+					<div class="form-group">
+						<label for="InputApellido" class="bmd-label-floating">Apellido</label>
+						<input ng-model="beWaasher.user.lastName" type="text" class="form-control" id="exampleInputEmail1">
+					</div>
+					<div class="form-group">
+						<label for="InputTelefono" class="bmd-label-floating">Telefono</label>
+						<input ng-model="beWaasher.user.phone" type="text" class="form-control" id="exampleInputEmail1">
+					</div>			
+					<div class="form-group">
+						<label for="InputEmail1" class="bmd-label-floating">Correo</label>
+						<input ng-model="beWaasher.user.email" type="email" class="form-control" id="exampleInputEmail1">
+					</div>
+					<div class="form-group">
+						<label for="InputFecha" class="bmd-label-floating">Fecha de nacimiento</label>
+						<input ng-model="logger.user.date" type="text" class="form-control" id="exampleInputEmail1">
+					</div>
+				        
+				            <div class="sample">
+								<div class="form-group">
+								    <label for="s1">Nacionalidad</label>
+								    <select id="s1" class="form-control">
+								      <option value="Chile">Chile</option>
+								      <option value="Uruguay">Uruguay</option>
+								      <option value="Venezuela">Venezuela</option>
+								      <option value="Colombia">Colombia</option>				      
+								    </select>
+								</div>
+							</div>
+							<div class="sample">
+								<div class="form-group">
+								    <label for="s1">Comuna</label>
+								    <select id="s1" class="form-control">
+								      <option value="Chile">Comuna1</option>
+								      <option value="Uruguay">Comuna2</option>
+								      <option value="Venezuela">Comuna3</option>
+								      <option value="Colombia">Comuna4</option>				      
+								    </select>
+								</div>
+							</div>
+				      
+				      <div class="form-group">
 
-						<div class="sample">
-						  <div class="form-group">
-						    <label for="s1">Nacionalidad</label>
-						    <select id="s1" class="form-control">
-						      <option value="Apple fritter">Chile</option>
-						      <option value="Croissant">Venezuela</option>
-						      <option value="Donut">Canada</option>
-						      <option value="Financier">Uruguay</option>
-						    </select>
-						  </div>
-						</div>  
+					<div class="form-group has-success label-floating">
+					    <label for="f1" class="control-label">Dirección</label>
+					    <input type="email" class="form-control" id="f1">
+					    <span class="help-block">Porfavor introduzca zona donde vive, calle, urbanización, casa o apartamento, región y comuna.</span>
+				    </div>
+				   
+					<button type="submit" class="btn btn-be-waasher btn-raised btn-primary">Continuar</button>
 
-					<button type="submit" class="btn btn-be-waasher btn-raised btn-success">ENVIAR</button> 
-				</div>
-			</div>
-			    
-		</form>	
-	</div>	
-	</div>
+				</form>
+		    </div>
+		</div>
+    </div>
 </div>
