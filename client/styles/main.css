@@ -3,7 +3,7 @@
 }
 
 .btn-green {
-	background-color: #0E481E;
+	background-color: #0E481E!important;
     color: #FFFFFF !important;
     box-shadow: 0px 5px 4px #B2B2B2 !important;
 }
@@ -261,4 +261,8 @@
 
 #login-form{
 	margin: 0 auto;
+}
+
+#login-form .form-group{
+	margin: 0;
 }
