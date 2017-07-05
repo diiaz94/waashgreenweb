@@ -1,21 +1,22 @@
 <div class="container" >
-	
-
 	<div class="main" id = "content-be-waasher">
-
 		<div class="row">
-
 			<div class="col-xs-12 col-sm-8 col-md-8">
 
 				<h5 class="step1 title">Solicitud de Registro</h5> 	
-				<div class="input-group input-full" style="text-align: center">
-					    	<label class="login-facebook" ng-click="logger.loginWithFacebook()"> <img src="/img/facebook-login.png" 
-					    	style="width:20px;height: 20px">
-					    	Inicia sesión con Facebook</label>			    	
-				</div>
-		        <div style="height: 2px;background-color: #5b6f98; margin-bottom: 1px;"></div>
-				<form id ="be-waasher-form" class="form" ng-submit="beWaasher.submit(beWaasher.user)" >			
-					
+				<h5 class="step2 title" style="display:none;">Completa los datos obligatorios y crea una contraseña para tu cuenta</h5> 
+
+				<form id ="be-waasher-form" class="form" ng-submit="beWaasher.submit(beWaasher.user)" >	
+
+            <div class="step1 content">
+				    <div class="step1 content">			
+						<div class="input-group input-full" style="text-align: center">
+							    	<label class="login-facebook" ng-click="logger.loginWithFacebook()"> <img src="/img/facebook-login.png" 
+							    	style="width:20px;height: 20px">
+							    	Inicia sesión con Facebook</label>			    	
+						</div>
+				    <div style="height: 2px;background-color: #5b6f98; margin-bottom: 1px;"></div>
+
 					<div class="form-group">
 						<label for="InputNombre" class="bmd-label-floating">Nombre</label>
 						<input ng-model="beWaasher.user.firstName" type="text" class="form-control" id="firstName">
@@ -67,10 +68,30 @@
 					    <input type="text" class="form-control" id="f1">
 					    <span class="help-block">Porfavor introduzca zona donde vive, calle, urbanización, casa o apartamento, región y comuna.</span>
 				    </div>
-				   
-					<button type="submit" class="btn btn-be-waasher btn-raised btn-primary">Continuar</button>
+		    </div>
+            <div class="step2 content" style="display:none;">
+                    <div class="form-group">
+						<label for="InputRut" class="bmd-label-floating">RUT</label>
+						<input ng-model="beWaasher.user.rut" type="text" class="form-control" id="rut">
+					</div>
+					<div class="form-group">
+						<label for="InputPassword" class="bmd-label-floating">Contraseña</label>
+						<input ng-model="beWaasher.user.password" type="text" class="form-control" id="contraseña">
+					</div>
+					<div class="form-group">
+						<label for="InputConfirmPassword" class="bmd-label-floating">Confirma Contraseña</label>
+						<input ng-model="beWaasher.user.cpassword" type="text" class="form-control" id="ConfirmaContraseña">
+					</div>	
+					 <div class="checkbox">
+				          <label>
+				          <input ng-model="beWaasher.user.agree" type="checkbox">Acepto los términos y condiciones</label>
+				    </div>	
 
-				</form>
+            </div>
+
+					<button type="submit" class="btn btn-be-waasher btn-raised btn-primary">Continuar</button>
+       
+				</form>		
 		    </div>
 		</div>
     </div>
