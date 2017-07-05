@@ -107,11 +107,36 @@
 	display: none;
 }
 
+#content-be-waasher h5 {
+	color: #c4c4c3;
+	padding: 30px;
+	font-size: 25px;
+	text-align: center;
+}
+
+#content-be-waasher .btn-be-waasher {
+	margin-top: 60px;
+	width: 100%;
+}
+
+#content-be-waasher input {
+	margin-top: 0.5%;
+}
+
+#content-be-waasher .check-with-text {
+	width: 100%;
+	margin-top: 60%;
+	text-align: center;
+}
 
 .row{
 	margin-left: 0px!important;
     margin-right: 0px !important;
     display: flex!important;
+}
+
+#be-waasher-form{
+	margin: 0 auto;
 }
 
 #login-form{
@@ -120,6 +145,7 @@
 .checkbox {
 	text-align: center;
 }
+
 
 .btn-green {
 	background-color: #0E481E;
