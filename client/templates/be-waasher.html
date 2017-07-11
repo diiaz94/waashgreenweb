@@ -2,13 +2,19 @@
 	<div class="main" id = "content-be-waasher">
 		<div class="row">
 			<div class="col-xs-12 col-sm-8 col-md-8">
+								
+				<div class="main" id = "content-be-waasher">
+					<div id="bar-top">
+					<img src="/img/back1600.png" ui-sref="login" class="step1" />
+					<img src="/img/back1600.png" type="submit" class="step2" style="display:none;"/>
+					<div class="line-divider"></div>
+				</div>
 
 				<h5 class="step1 title">Solicitud de Registro</h5> 	
 				<h5 class="step2 title" style="display:none;">Completa los datos obligatorios y crea una contraseña para tu cuenta</h5> 
 
-				<form id ="be-waasher-form" class="form" ng-submit="beWaasher.submit(beWaasher.user)" >	
-
-            <div class="step1 content">				   			
+				<form id ="be-waasher-form" class="form" ng-submit="beWaasher.submit(beWaasher.user)">	
+			<div class="step1 content">				   			
 						<div class="input-group input-full" style="text-align: center">
 							    	<label class="login-facebook" ng-click="logger.loginWithFacebook()"> <img src="/img/facebook-login.png" 
 							    	style="width:20px;height: 20px">
