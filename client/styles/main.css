@@ -81,6 +81,8 @@
 }
 #content-login .row >div{
 	margin: auto;
+	padding-right: 2px;
+	padding-left: 2px;
 }
 
 #content-sign-up h4 {
@@ -233,9 +235,6 @@
 #content-login{
 	margin-top: 6%;
 }
-#content-login .row >div{
-	margin: auto;
-}
 
 #content-sign-up h4 {
 	color: #c4c4c3;
@@ -274,4 +273,13 @@
 
 #login-form .form-group{
 	margin: 0;
+}
+
+#btn-login{
+	background-color: #33cd5e;
+	color: white;
+}
+
+#btn-login:hover{
+	background-color: #0e7a2c;
 }
